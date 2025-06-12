@@ -1,0 +1,366 @@
+/* Alumni Dashboard Styles */
+@import url('./CommonStyles.css');
+
+.adash-container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: var(--spacing-xl) auto;
+  padding: 0 var(--spacing-md);
+}
+
+.adash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.adash-header h1 {
+  font-size: var(--font-size-heading);
+  color: var(--text-color);
+  margin: 0;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.edit-button {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: none;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all var(--transition-medium);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.edit-button.edit {
+  background: var(--primary-gradient);
+  color: white;
+  box-shadow: 0 4px 15px rgba(26, 42, 108, 0.2);
+}
+
+.edit-button.cancel {
+  background: var(--danger-color);
+  color: white;
+  box-shadow: 0 4px 10px rgba(178, 31, 31, 0.2);
+}
+
+.edit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(26, 42, 108, 0.3);
+}
+
+.error-message {
+  background-color: rgba(231, 76, 60, 0.1);
+  color: var(--danger-color);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--spacing-md);
+  border-left: 4px solid var(--danger-color);
+  animation: fadeIn var(--transition-medium);
+}
+
+.success-message {
+  background-color: rgba(46, 204, 113, 0.1);
+  color: var(--success-color);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--spacing-md);
+  border-left: 4px solid var(--success-color);
+  animation: fadeIn var(--transition-medium);
+}
+
+.profile-form {
+  background-color: var(--background-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--card-shadow);
+}
+
+.form-section {
+  margin-bottom: var(--spacing-xxl);
+  animation: fadeIn 0.6s ease-out;
+}
+
+.form-section h2 {
+  font-size: var(--font-size-xl);
+  color: transparent;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--accent-color);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.form-section h2 svg {
+  color: var(--accent-color);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-md);
+  transition: all var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 2px rgba(26, 42, 108, 0.1);
+  outline: none;
+  background-image: linear-gradient(#fff, #fff), var(--primary-gradient);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.form-group input:disabled,
+.form-group textarea:disabled,
+.form-group select:disabled {
+  background-color: var(--background-light);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Profile Picture Styles */
+.profile-pic-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto var(--spacing-lg);
+}
+
+.profile-pic-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-round);
+  border: 3px solid var(--accent-color);
+  box-shadow: var(--card-shadow);
+  transition: all var(--transition-medium);
+}
+
+.profile-pic-container:hover img {
+  border-color: var(--primary-color);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.profile-pic-overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: var(--primary-gradient);
+  border-radius: var(--border-radius-round);
+  padding: 8px;
+  cursor: pointer;
+  box-shadow: var(--card-shadow);
+  transition: all var(--transition-medium);
+}
+
+.profile-pic-overlay:hover {
+  transform: scale(1.1);
+}
+
+.experience-item {
+  background-color: var(--background-light);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--spacing-md);
+  box-shadow: var(--card-shadow);
+  transition: all var(--transition-medium);
+  border-left: 4px solid;
+  border-image: var(--primary-gradient) 1 stretch;
+}
+
+.experience-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.skill-item {
+  background: var(--light-gradient);
+  color: var(--text-color);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  transition: all var(--transition-medium);
+}
+
+.skill-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow);
+}
+
+.skill-item input {
+  border: none;
+  background: transparent;
+  color: var(--text-color);
+  width: 100%;
+}
+
+.add-button {
+  background: var(--success-color);
+  color: white;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  margin-top: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+/* Card Headers in Alumni Dashboard */
+.card-header.bg-primary {
+  background: var(--primary-gradient) !important;
+}
+
+/* Text-primary icons */
+.text-primary {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.form-actions {
+  margin-top: var(--spacing-xl);
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-md);
+}
+
+.save-button {
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  transition: all var(--transition-medium);
+  box-shadow: 0 4px 15px rgba(26, 42, 108, 0.2);
+}
+
+.save-button:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(26, 42, 108, 0.3);
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  font-size: var(--font-size-lg);
+  color: var(--text-light);
+}
+
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid var(--primary-color);
+  width: 40px;
+  height: 40px;
+  margin-right: var(--spacing-md);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .adash-container {
+    padding: var(--spacing-md);
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .profile-pic-container {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .adash-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .save-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Event tabs toggle styles */
+.tabs-toggle {
+  margin-bottom: 1rem;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+} 

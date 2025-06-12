@@ -1,0 +1,76 @@
+.modern-donation-card {
+  border-radius: 1.5rem;
+  box-shadow: 0 6px 32px 0 rgba(78, 84, 200, 0.10), 0 1.5px 6px 0 rgba(143, 148, 251, 0.10);
+  transition: transform 0.18s cubic-bezier(.4,2,.6,1), box-shadow 0.18s;
+  cursor: pointer;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f8fafc 60%, #e0e7ff 100%);
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  animation: cardFadeIn 0.7s cubic-bezier(.4,2,.6,1);
+}
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(30px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.modern-donation-card:hover {
+  transform: translateY(-8px) scale(1.035);
+  box-shadow: 0 16px 48px 0 rgba(78, 84, 200, 0.22), 0 4px 16px 0 rgba(143, 148, 251, 0.22);
+  background: linear-gradient(135deg, #e0e7ff 60%, #f8fafc 100%);
+}
+.modern-donation-card .badge.goal-achieved {
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(67, 233, 123, 0.18);
+  letter-spacing: 0.5px;
+  padding: 0.5em 1.2em;
+  animation: badgePop 0.5s cubic-bezier(.4,2,.6,1);
+}
+@keyframes badgePop {
+  0% { transform: scale(0.7); opacity: 0; }
+  80% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); }
+}
+.modern-progress .progress-bar {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(78, 84, 200, 0.10);
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  transition: width 0.7s cubic-bezier(.4,2,.6,1), background 0.3s;
+  color: #fff;
+  text-shadow: 0 1px 4px #4e54c899;
+}
+.goal-achieved .modern-progress .progress-bar {
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%) !important;
+  color: #fff;
+  text-shadow: 0 1px 4px #2ecc40cc;
+}
+.modern-donation-card .fa-hand-holding-heart {
+  font-size: 1.7em;
+  color: #fff;
+  filter: drop-shadow(0 2px 6px #4e54c8aa);
+}
+.modern-donation-card .fa-edit {
+  color: #4e54c8;
+  font-size: 1.15em;
+  vertical-align: middle;
+  transition: color 0.2s;
+}
+.modern-donation-card .btn-outline-primary {
+  border-radius: 1rem;
+  font-weight: 500;
+  padding: 0.25rem 1rem;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px #8f94fb33;
+}
+.modern-donation-card .btn-outline-primary:hover {
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  color: #fff;
+  border-color: #4e54c8;
+  box-shadow: 0 2px 8px #4e54c855;
+} 
